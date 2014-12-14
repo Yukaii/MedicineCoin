@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>Medicine Coin - Pharmacist</title>
+	<link href='img/icon.ico' rel='icon' type='image/x-icon'/>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/font.css" rel="stylesheet" type="text/css">
+<!-- 	<script src="js/jquery.1.11.0.js"></script> -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js
+	"></script>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/select2/3.5.2/select2.css">
+	<script src="js/bootstrap.js"></script>
+	<script src="//cdn.jsdelivr.net/select2/3.5.2/select2.js"></script>
+	<script src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
+	<script src="http://vast-engineering.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
+	<script type="text/javascript" src="js/my.js"></script>
+	<script type="text/javascript" src="js/variable.js"></script>
+	<style type="text/css">
+		.select2-drop, .select2-display-none, .select2-with-searchbox, .select2-drop-active {
+			z-index: 1000000001 !important;
+		}
+	</style>
+	<script type="text/javascript" src="js/prescription.js"></script>
+</head>
+<body>
+	<div class="navbar">
+		
+		
+		<div class="navbar-inner">
+			<div class="navLOGO"></div>
+			<div class="navTitle">Medicine Coin</div>
+			<ul class="nav">
+				<li><a href="#">新增記錄</a></li>
+				<li><a href="#" target="_new" class="prescription_popup_open">新增處方籤</a></li>
+				<li><a href="#">登出</a></li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div id="prescription_popup">
+		<div class="card-wrap">
+			<h4>處方籤</h4>
+			<div id="medicine-lists">
+				<button id="add_btn">+</button>
+				<button id="delete_btn">x</button>
+
+			</div>
+			<h4>服用時間</h4>
+			<div>
+				<input type="checkbox" name="eatBefore" value="true" class="css-checkbox">飯前</input>
+				<input type="checkbox" name="eatAfter" value="true" class="css-checkbox">飯後</input>
+			</div>
+			<div>
+				<input type="checkbox" name="morning" value="true" class="css-checkbox">早</input>
+				<input type="checkbox" name="noon" value="true" class="css-checkbox">午</input>
+				<input type="checkbox" name="night" value="true" class="css-checkbox">晚</input>
+			</div>
+			<h4>天數</h4>
+			<div>
+				<select id="time_span"></select>
+			</div>
+			<div style="padding-top: 8px; float: right; display: block;">
+				<button class="prescription_popup_close" id="submit_prescription">好</button>
+				<button class="prescription_popup_close">算了</button>	
+			</div>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#prescription_popup').popup({
+				// color: 'white',
+				// opacity: 1,
+				transition: 'all 0.3s',
+				// scrolllock: true,
+				onclose: resetForm
+			});
+			
+		});
+	</script>
+
+
+
+	<div id="userList">
+		<h2>使用者列表</h2>
+		<select id="user-lists" size="10">
+			
+		</select>	
+<!-- 		<div class="input-prepend">
+			<div class="seachIcon"><i class="icon-search"></i></div>
+			<input type="text" name="seach">
+
+		</div> -->
+
+<!-- 		<ul>
+			<li></li>
+		</ul> -->
+	</div>
+
+	<div class="main">	
+			<div class="mainBlock">
+				<div class="mainCol mainColPhoto"></div>
+				<div class="row">
+				</div>
+			</div>
+			<div class="pa">
+				<div class="mainBlock">
+					<div class="mainCol">Choose Prescription：
+						<ul>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="pa">
+				<div class="mainBlock">
+					<div class="mainCol">Medicines：
+						<ul>
+							<li></li>
+						</ul>
+					</div>
+					<div class="mainCol">Eat Time：</div>
+					<div class="mainCol">Morning：</div>
+					<div class="mainCol">Noon：</div>
+					<div class="mainCol">Night：</div>
+					<div class="mainCol">Date：</div>
+
+				</div>
+			</div>
+
+	</div>
+
+</body>
+</html>

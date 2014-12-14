@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Medicine Coin</title>
+	<script src="js/jquery-1.11.0.js"></script>
+	<link href="css/mstyle.css" rel="stylesheet" type="text/css">
+	<link href="css/mfont.css" rel="stylesheet" type="text/css">
+	<link href='img/icon.ico' rel='icon' type='image/x-icon'/>
+</head>
+<body>
+	<div class = "top">
+		<div class="container">
+			<div class="login"><a href="/Pharmacist">Pharmacist Log In</a></div>
+			<div class="topImage">
+			</div>
+			<div class="topBlock">
+				<h1>Medicine Coin</h1>
+				<p>輕鬆掌握用藥須知，全力為您的健康把關。</p>
+				<div class="topButton_blue">立即下載</div>
+				<a href="#A"><div class="topButton">了解更多</div></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="mainBlock" id="A">
+			<div class="halfPage right">
+				<img src="img/e1.png">
+			</div>
+			<h1>藥，不能亂吃</h1>
+			<p>有些藥可以一起吃，有些不行
+			<br>你吃藥的方式真的安全嗎?
+			</p>
+	</div>
+
+	<div class="mainBlock">
+		<ul class="appuse">
+			<div class="container">
+				<li>藥品查詢</li>
+				<li>病歴檢視</li>
+				<li>吃藥通知</li>
+				<li>即時聯絡</li>
+				<li>緊急處理</li>
+			</div>
+		</ul>
+	</div>
+
+	<div class="mainBlock">
+			<div class="ftPage center">
+				<img src="img/hand.png">
+			</div>
+		<div class="ttextBlock">
+			<h1>即時搜尋，即時掌握</h1>
+			<p>快速取得最新的藥物資訊
+			<br>
+			</p>
+		</div>
+	</div>
+
+	<div class="mainBlock">
+			<div class="ftPage left">
+				<img src="img/dt.png">
+			</div>
+			<h1>藥師服務</h1>
+			<p>藥命的問題不能等<br>
+			App與藥師端24小時即時連線<br>
+			
+			</p>
+	</div>
+
+	<script type="text/javascript">
+	$(function() {
+	    $('a[href*=#]:not([href=#])').click(function() {
+	        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+	            var target = $(this.hash);
+	            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	            if (target.length) {
+	                $('html,body').animate({
+	                    scrollTop: target.offset().top
+	                    }, 1000);
+	                    return false;
+	            }
+	        }
+	    });
+
+	    $('[data-spy="scroll"]').each(function () {
+	        var $spy = $(this).scrollspy('refresh')
+	    });
+	});
+	</script>
+</body>
+</html>
